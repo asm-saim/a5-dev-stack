@@ -45,7 +45,7 @@ const Navbar = () => {
 
       {/* Mobile dropdown menu */}
       {isOpen && (
-        <div className="md:hidden bg-amber-100 border-t border-amber-200">
+        <div className="md:hidden border-t border-gray-100">
           <ul className="flex flex-col gap-4 px-6 py-4 text-[#475569FF] font-medium text-base">
             {navLinks.map((link) => (
               <li

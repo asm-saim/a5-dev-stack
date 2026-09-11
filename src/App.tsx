@@ -4,8 +4,10 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <Banner></Banner>
+      <div className="min-h-screen md:h-screen flex flex-col">
+        <Navbar />
+        <Banner />
+      </div>
     </>
   );
 }
