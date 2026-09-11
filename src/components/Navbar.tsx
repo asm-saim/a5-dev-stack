@@ -7,7 +7,7 @@ const Navbar = () => {
   const navLinks = ["Home", "Technologies", "Projects", "About", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 border-b border-gray-100 bg-[#ffffff]">
+    <nav className="fixed top-0 left-0 w-full z-50 border-b border-gray-100 bg-[#ffffff]/80 backdrop-blur-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
         {/* Left: Hamburger (mobile only) */}
         <div className="flex items-center md:hidden">
