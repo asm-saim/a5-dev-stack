@@ -7,8 +7,8 @@ const Navbar = () => {
   const navLinks = ["Home", "Technologies", "Projects", "About", "Contact"];
 
   return (
-    <nav className="sticky top-0 z-50 bg-amber-100">
-      <div className="max-w-6xl mx-auto flex justify-between items-center py-2 px-4">
+    <nav className="sticky top-0 z-50 border-b border-gray-100">
+      <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-4">
         {/* Left: Hamburger (mobile only) */}
         <div className="flex items-center md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu" className="p-1">
@@ -18,7 +18,7 @@ const Navbar = () => {
 
         {/* Logo: centered on mobile, left on desktop */}
         <div className="md:order-first">
-          <img src={NavLogo} alt="Logo" className="h-8 md:h-10" />
+          <img src={NavLogo} alt="Logo" className="h-8 md:h-9" />
         </div>
 
         {/* Center: Nav links (desktop only) */}
@@ -34,7 +34,9 @@ const Navbar = () => {
 
         {/* Right: Auth buttons */}
         <div className="flex gap-2 sm:gap-4 items-center justify-around">
-          <button className="font-medium text-sm sm:text-base">Sign In</button>
+          <button className="font-medium text-sm sm:text-base text-[#475569FF] hover:text-[#db2777] transition-colors bg-transparent border-none p-0">
+            Sign In
+          </button>
           <button className="font-medium text-sm sm:text-base px-3 sm:px-5 py-1.5 sm:py-2 btn btn-secondary bg-[#d91b7eFF] text-white rounded-full border-none">
             Sign Up
           </button>
