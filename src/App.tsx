@@ -1,5 +1,17 @@
+import { Suspense } from "react";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
+import Technologies from "./components/Technologies";
+import type { ITechData } from "./types";
+
+//
+const techDataFetch = async (): Promise<ITechData[]> => {
+  const response = await fetch("/techData.json");
+  const data: ITechData[] = await response.json();
+  return data;
+};
+
+const techData = techDataFetch();
 
 function App() {
   return (
@@ -7,7 +19,10 @@ function App() {
       <div className="min-h-screen md:h-screen flex flex-col">
         <Navbar />
         <Banner />
-      </div>
+      </div>            
+      <Suspense fallback="Loading Technologies...">
+        <Technologies techData={techData}></Technologies>
+      </Suspense>
     </>
   );
 }
