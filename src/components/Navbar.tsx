@@ -7,8 +7,8 @@ const Navbar = () => {
   const navLinks = ["Home", "Technologies", "Projects", "About", "Contact"];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-gray-100">
-      <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-4">
+    <nav className="fixed top-0 left-0 w-full z-50 border-b border-gray-100 bg-[#ffffff]">
+      <div className="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
         {/* Left: Hamburger (mobile only) */}
         <div className="flex items-center md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu" className="p-1">

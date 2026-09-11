@@ -7,4 +7,5 @@ export interface ITechData {
   rating: number;
   difficulty: string;
   badge: string;
+  primaryColor: string;
 }

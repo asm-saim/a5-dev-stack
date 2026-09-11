@@ -5,6 +5,7 @@
     "category": "Frontend",
     "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
     "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
+    "primaryColor": "#61DAFB",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -15,6 +16,7 @@
     "category": "Frontend",
     "description": "A progressive JavaScript framework for building user interfaces and single-page applications.",
     "icon": "https://icon.icepanel.io/Technology/svg/Vue.js.svg",
+    "primaryColor": "#42B883",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -25,6 +27,7 @@
     "category": "Frontend",
     "description": "A modern UI framework that shifts much of the work from the browser to the build step.",
     "icon": "https://icon.icepanel.io/Technology/svg/Svelte.svg",
+    "primaryColor": "#FF3E00",
     "rating": 4.7,
     "difficulty": "Intermediate",
     "badge": "Fast"
@@ -35,9 +38,10 @@
     "category": "Frontend",
     "description": "A React framework for building fast, scalable web applications with server-side capabilities.",
     "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+    "primaryColor": "#000000",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Full-Stack"
+    "badge": "Popular"
   },
   {
     "id": "nodejs",
@@ -45,6 +49,7 @@
     "category": "Backend",
     "description": "A JavaScript runtime that enables developers to build scalable server-side applications.",
     "icon": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+    "primaryColor": "#339933",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Popular"
@@ -55,9 +60,10 @@
     "category": "Database",
     "description": "A powerful, open-source object-relational database system with proven reliability.",
     "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+    "primaryColor": "#4169E1",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Top SQL"
+    "badge": "Essential"
   },
   {
     "id": "redis",
@@ -65,6 +71,7 @@
     "category": "Database",
     "description": "An in-memory data store commonly used for caching, real-time applications, and fast data access.",
     "icon": "https://icon.icepanel.io/Technology/svg/Redis.svg",
+    "primaryColor": "#DC382D",
     "rating": 4.7,
     "difficulty": "Intermediate",
     "badge": "Fast"
@@ -75,6 +82,7 @@
     "category": "Language",
     "description": "A versatile programming language used to create interactive web applications and dynamic experiences.",
     "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+    "primaryColor": "#F7DF1E",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"
@@ -85,6 +93,7 @@
     "category": "Language",
     "description": "A strongly typed programming language that builds on JavaScript for more reliable applications.",
     "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+    "primaryColor": "#3178C6",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Popular"
@@ -95,9 +104,10 @@
     "category": "Language",
     "description": "A widely used object-oriented programming language for building reliable and scalable applications.",
     "icon": "https://icon.icepanel.io/Technology/svg/Java.svg",
+    "primaryColor": "#ED8B00",
     "rating": 4.7,
     "difficulty": "Intermediate",
-    "badge": "Enterprise"
+    "badge": "Essential"
   },
   {
     "id": "tailwindcss",
@@ -105,6 +115,7 @@
     "category": "Styling",
     "description": "A utility-first CSS framework for rapidly building modern and responsive user interfaces.",
     "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    "primaryColor": "#06B6D4",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -115,8 +126,9 @@
     "category": "DevOps",
     "description": "A platform for packaging applications and their dependencies into portable containers.",
     "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+    "primaryColor": "#2496ED",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "DevOps"
+    "badge": "Containers"
   }
 ]

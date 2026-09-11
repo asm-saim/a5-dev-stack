@@ -16,10 +16,10 @@ const techData = techDataFetch();
 function App() {
   return (
     <>
-      <div className="min-h-screen md:h-screen flex flex-col">
+      <div className="min-h-screen md:h-screen flex flex-col pt-[65px]">
         <Navbar />
         <Banner />
-      </div>            
+      </div>
       <Suspense fallback="Loading Technologies...">
         <Technologies techData={techData}></Technologies>
       </Suspense>
