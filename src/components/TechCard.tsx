@@ -1,26 +1,43 @@
+import { useState, type Dispatch, type SetStateAction } from "react";
 import type { ITechData } from "../types";
+import { Check } from "lucide-react";
 
 interface TechCardProps {
   techData: ITechData;
+  selectedTech: ITechData[];
+  setSelectedTech: Dispatch<SetStateAction<ITechData[]>>;
 }
 
-const TechCard = ({ techData }: TechCardProps) => {
-  console.log("form card", techData);
+const TechCard = ({ techData, selectedTech, setSelectedTech }: TechCardProps) => {
+  // console.log("form card", techData);
+
+  //state  for button:
+  const [buttonType, setButtonType] = useState(false);
+
+  const handleButtonType = () => {
+    setButtonType(true);
+    setSelectedTech([...selectedTech, techData]);
+  };
+
   return (
-    <div className="w-full max-w-sm h-[305px] rounded-xl border border-slate-100 bg-white p-4 shadow-sm flex flex-col">
+    <div
+      className={`w-full max-w-sm rounded-xl border p-4 shadow-sm ${
+        buttonType ? "border-[#ca1b6a]" : "border-slate-200"
+      }`}
+    >
       {/* Top section */}
       <div className="flex items-start justify-between">
         <img src={techData.icon} alt={techData.name} className="h-10 w-10 object-contain" />
 
         <span
-  className="rounded-full px-3 py-1 text-xs font-bold"
-  style={{
-    color: techData.primaryColor,
-    backgroundColor: `${techData.primaryColor}30`,
-  }}
->
-  {techData.badge}
-</span>
+          className="rounded-full px-3 py-1 text-xs font-bold"
+          style={{
+            color: techData.primaryColor,
+            backgroundColor: `${techData.primaryColor}30`,
+          }}
+        >
+          {techData.badge}
+        </span>
       </div>
 
       {/* Content */}
@@ -46,8 +63,21 @@ const TechCard = ({ techData }: TechCardProps) => {
       </div>
 
       {/* Button */}
-      <button className="btn mt-4 h-10 w-full rounded-lg bg-[#0f172a] text-sm font-medium text-white transition hover:bg-slate-800">
-        Add to Stack
+      <button
+        onClick={handleButtonType}
+        className={`btn mt-4 h-10 w-full rounded-lg text-sm font-semibold ${
+          buttonType ? "bg-[#e495b74f] text-[#db2777]" : "bg-[#0f172a] text-white hover:bg-slate-800"
+        }`}
+        disabled={buttonType}
+      >
+        {buttonType ? (
+          <>
+            <Check size={18} />
+            Added to Stack
+          </>
+        ) : (
+          "Add to Stack"
+        )}
       </button>
     </div>
   );
