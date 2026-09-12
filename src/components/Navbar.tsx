@@ -34,7 +34,7 @@ const Navbar = () => {
 
         {/* Right: Auth buttons */}
         <div className="flex gap-2 sm:gap-4 items-center justify-around">
-          <button className="font-medium text-sm sm:text-base text-[#475569FF] hover:text-[#db2777] transition-colors bg-transparent border-none p-0">
+          <button className="cursor-pointer font-medium text-sm sm:text-base text-[#475569FF] hover:text-[#db2777] transition-colors bg-transparent border-none p-0">
             Sign In
           </button>
           <button className="font-medium text-sm sm:text-base px-3 sm:px-5 py-1.5 sm:py-2 btn btn-secondary bg-[#d91b7eFF] text-white rounded-full border-none">

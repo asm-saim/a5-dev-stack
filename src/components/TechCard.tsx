@@ -1,6 +1,9 @@
 import { useState, type Dispatch, type SetStateAction } from "react";
 import type { ITechData } from "../types";
 import { Check, Ban } from "lucide-react";
+import { Bounce, toast } from "react-toastify";
+import "../../src/index.css";
+import { CheckCircle } from "lucide-react";
 
 interface TechCardProps {
   techData: ITechData;
@@ -16,6 +19,18 @@ const TechCard = ({ techData, selectedTech, setSelectedTech }: TechCardProps) =>
 
   const handleButtonType = () => {
     setSelectedTech([...selectedTech, techData]);
+
+    //Adding toast for add to Stack Button
+    toast.success(`${techData.name} is Added to Stack!`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      transition: Bounce,
+      className: "toast-gradient",
+    });
   };
 
   //Mouse hover ban sign:

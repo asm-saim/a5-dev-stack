@@ -6,3 +6,8 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+
+
+.Toastify__progress-bar {
+  background: linear-gradient(to right, #ff5722, #d81b7e, #7c3aed) !important;
+}

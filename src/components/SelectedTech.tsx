@@ -1,6 +1,8 @@
 import React, { type Dispatch, type SetStateAction } from "react";
 import type { ITechData } from "../types";
 import SelectedCard from "./SelectedCard";
+import { Bounce, toast } from "react-toastify";
+import { Trash } from "lucide-react";
 
 interface SelectedTechProps {
   selectedTech: ITechData[];
@@ -13,6 +15,25 @@ const SelectedTech = ({ selectedTech, setSelectedTech }: SelectedTechProps) => {
   //to remove all selected card:
   const handleRemoveAll = () => {
     setSelectedTech([]);
+
+    //toast for remove all:
+    toast(
+      <div className="flex items-center gap-2">
+        <Trash size={18} />
+        <span>Stack Cleared Successfully!</span>
+      </div>,
+      {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      },
+    );
   };
 
   return (
