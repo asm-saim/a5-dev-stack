@@ -23,7 +23,7 @@ const Technologies = ({ techData }: TechDataProps) => {
             Technologies
           </span>
         </h1>
-        <p className="text-[#abbdd6] text-base">Pick one technology per category to build your ideal stack.</p>
+        <p className="text-[#475569] text-base">Pick one technology per category to build your ideal stack.</p>
       </div>
       <div className="grid grid-cols-4 max-w-6xl mx-auto gap-5 p-4">
         <div className="col-span-3">
@@ -35,7 +35,7 @@ const Technologies = ({ techData }: TechDataProps) => {
             ></AvailableTech>
           }
         </div>
-        <div className="col-span-1 bg-emerald-200">
+        <div className="col-span-1">
           {<SelectedTech selectedTech={selectedTech} setSelectedTech={setSelectedTech}></SelectedTech>}
         </div>
       </div>

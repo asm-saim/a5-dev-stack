@@ -22,7 +22,7 @@ const TechCard = ({ techData, selectedTech, setSelectedTech }: TechCardProps) =>
   return (
     <div
       className={`w-full max-w-sm rounded-xl border p-4 shadow-sm ${
-        buttonType ? "border-[#ca1b6a]" : "border-slate-200"
+        buttonType ? "border-[#db2777]" : "border-slate-200"
       }`}
     >
       {/* Top section */}
