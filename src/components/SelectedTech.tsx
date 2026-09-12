@@ -13,12 +13,17 @@ const SelectedTech = ({ selectedTech, setSelectedTech }: SelectedTechProps) => {
     <div className="p-3 rounded-xl border border-slate-200">
       {/* <h1>{selectedTech.length}</h1> */}
       <h1 className=" text-[#0f172a] font-bold text-base">Your Stack</h1>
-      <p className="text-xs font-semibold text-[#687588] my-1">
+      <p className="text-xs font-semibold text-[#687588] mt-1 mb-3">
         {selectedTech.length === 0 ? "No Technology selected yet" : `${selectedTech.length} Technology selected`}
       </p>
-      {
-        selectedTech.map(cardSelected=><SelectedCard cardSelected={cardSelected}></SelectedCard>)
-      }
+      <div className="border border-dashed border-slate-200 rounded-xl p-1">
+        <p className="flex h-28 justify-center items-center text-xs font-normal text-[#64748B]">
+          {`${selectedTech.length === 0 ? "Your stack is empty" : ""}`}
+        </p>
+        {selectedTech.map((cardSelected) => (
+          <SelectedCard cardSelected={cardSelected}></SelectedCard>
+        ))}
+      </div>
     </div>
   );
 };
