@@ -14,9 +14,9 @@ const Technologies = ({ techData }: TechDataProps) => {
   const [selectedTech, setSelectedTech] = useState<ITechData[]>([]);
 
   return (
-    <div className="">
+    <div className="mb-24">
       {/*Technology section title and subtitle */}
-      <div className="max-w-6xl mx-auto px-4 py-8 space-y-3">
+      <div className="max-w-6xl mx-auto px-4 py-6 space-y-3">
         <h1 className="font-bold text-4xl text-[#0f172a]">
           Explore the{" "}
           <span className="bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
