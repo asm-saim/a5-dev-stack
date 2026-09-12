@@ -48,16 +48,16 @@ const TechCard = ({ techData, selectedTech, setSelectedTech }: TechCardProps) =>
 
   return (
     <div
-      className={`w-full max-w-sm rounded-xl border p-4 shadow-sm ${
+      className={`w-full lg:max-w-sm rounded-xl border p-3 lg:p-4 shadow-sm ${
         buttonType ? "border-[#db2777]" : "border-slate-200"
       }`}
     >
       {/* Top section */}
-      <div className="flex items-start justify-between">
-        <img src={techData.icon} alt={techData.name} className="h-10 w-10 object-contain" />
+      <div className="flex items-start justify-between gap-2 lg:gap-0">
+        <img src={techData.icon} alt={techData.name} className="h-8 w-8 lg:h-10 lg:w-10 object-contain" />
 
         <span
-          className="rounded-full px-3 py-1 text-xs font-bold"
+          className="rounded-full px-2.5 lg:px-3 py-1 text-[10px] lg:text-xs font-bold whitespace-nowrap"
           style={{
             color: techData.primaryColor,
             backgroundColor: `${techData.primaryColor}30`,
@@ -68,8 +68,8 @@ const TechCard = ({ techData, selectedTech, setSelectedTech }: TechCardProps) =>
       </div>
 
       {/* Content */}
-      <div className="mt-5 flex-1">
-        <h2 className="text-xl font-bold text-[#0f172a]">{techData.name}</h2>
+      <div className="mt-4 lg:mt-5 flex-1">
+        <h2 className="text-lg lg:text-xl font-bold text-[#0f172a]">{techData.name}</h2>
 
         <p className="mt-2 min-h-16 text-xs leading-5 text-[#64748B]">{techData.description}</p>
       </div>
@@ -78,7 +78,7 @@ const TechCard = ({ techData, selectedTech, setSelectedTech }: TechCardProps) =>
       <div className="my-4 border-t border-slate-100"></div>
 
       {/* Meta information */}
-      <div className="flex items-center justify-between gap-1 pr-2">
+      <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-2 lg:gap-1 pr-0 lg:pr-2">
         <span className="rounded bg-slate-100 px-2 py-1 text-xs font-medium text-[#64748b]">{techData.category}</span>
 
         <span className="text-xs font-medium text-[#64748b]">{techData.difficulty}</span>

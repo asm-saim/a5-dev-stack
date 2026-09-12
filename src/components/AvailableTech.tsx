@@ -9,9 +9,14 @@ interface AvailableTechData {
 }
 const AvailableTech = ({ allTechData, selectedTech, setSelectedTech }: AvailableTechData) => {
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
       {allTechData.map((techData) => (
-        <TechCard key={techData.id} techData={techData} selectedTech={selectedTech} setSelectedTech={setSelectedTech}></TechCard>
+        <TechCard
+          key={techData.id}
+          techData={techData}
+          selectedTech={selectedTech}
+          setSelectedTech={setSelectedTech}
+        ></TechCard>
       ))}
     </div>
   );

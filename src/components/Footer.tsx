@@ -106,7 +106,7 @@ const Footer = () => {
         <div className="my-10 border-t border-gray-200" />
 
         {/* Bottom */}
-        <div className="flex flex-col items-start justify-between gap-4 text-sm text-[#64748b] sm:flex-row sm:items-center">
+        <div className="flex flex-col items-start justify-between gap-4 text-[13px] text-[#64748b] sm:flex-row sm:items-center">
           <p>© 2026 Dev Stack. All rights reserved.</p>
 
           <div className="flex gap-6">

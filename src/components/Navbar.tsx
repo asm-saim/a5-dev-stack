@@ -23,7 +23,7 @@ const Navbar = () => {
 
         {/* Center: Nav links (desktop only) */}
         <div className="hidden md:block">
-          <ul className="flex justify-between items-center gap-5 text-[#475569FF] font-medium text-base">
+          <ul className="flex justify-between items-center gap-6 text-[#475569FF] font-medium text-sm">
             <li className="text-[#db2777] cursor-pointer">Home</li>
             <li className="cursor-pointer">Technologies</li>
             <li className="cursor-pointer">Projects</li>
@@ -34,10 +34,10 @@ const Navbar = () => {
 
         {/* Right: Auth buttons */}
         <div className="flex gap-2 sm:gap-4 items-center justify-around">
-          <button className="cursor-pointer font-medium text-sm sm:text-base text-[#475569FF] hover:text-[#db2777] transition-colors bg-transparent border-none p-0">
+          <button className="cursor-pointer font-medium text-xs sm:text-sm text-[#475569FF] hover:text-[#db2777] transition-colors bg-transparent border-none p-0">
             Sign In
           </button>
-          <button className="font-medium text-sm sm:text-base px-3 sm:px-5 py-1.5 sm:py-2 btn btn-secondary bg-[#d91b7eFF] text-white rounded-full border-none">
+          <button className="font-semibold text-xs sm:text-sm px-3 sm:px-5 py-1.5 sm:py-2 btn btn-secondary bg-[#d91b7eFF] text-white rounded-full border-none">
             Sign Up
           </button>
         </div>

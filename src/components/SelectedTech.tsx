@@ -45,22 +45,25 @@ const SelectedTech = ({ selectedTech, setSelectedTech }: SelectedTechProps) => {
       </p>
       <div className={`${selectedTech.length === 0 ? "border border-dashed border-slate-200 rounded-xl p-1" : ""}`}>
         <p
-          className={`${selectedTech.length === 0 ? "flex h-28 justify-center items-center text-xs font-normal text-[#64748B]" : ""}`}
+          className={`${selectedTech.length === 0 ? "flex h-20 lg:h-28 justify-center items-center text-xs font-normal text-[#64748B]" : ""}`}
         >
           {`${selectedTech.length === 0 ? "Your stack is empty" : ""}`}
         </p>
-        {selectedTech.map((cardSelected) => (
-          <SelectedCard
-            cardSelected={cardSelected}
-            selectedTech={selectedTech}
-            setSelectedTech={setSelectedTech}
-          ></SelectedCard>
-        ))}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-3 lg:gap-0">
+          {selectedTech.map((cardSelected) => (
+            <SelectedCard
+              key={cardSelected.id}
+              cardSelected={cardSelected}
+              selectedTech={selectedTech}
+              setSelectedTech={setSelectedTech}
+            ></SelectedCard>
+          ))}
+        </div>
       </div>
       {selectedTech.length !== 0 && (
         <button
           onClick={handleRemoveAll}
-          className="btn flex-1 w-full mt-5 sm:flex-none bg-transparent border border-red-200 text-red-600 font-bold text-sm rounded-lg"
+          className="btn flex-1 w-full mt-5 sm:flex-none bg-transparent border border-red-200 text-red-600 font-extrabold text-sm rounded-lg"
         >
           Remove All
         </button>
