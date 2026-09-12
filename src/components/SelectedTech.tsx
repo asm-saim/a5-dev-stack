@@ -9,6 +9,12 @@ interface SelectedTechProps {
 
 const SelectedTech = ({ selectedTech, setSelectedTech }: SelectedTechProps) => {
   console.log(selectedTech);
+
+  //to remove all selected card:
+  const handleRemoveAll = () => {
+    setSelectedTech([]);
+  };
+
   return (
     <div className="p-3 rounded-xl border border-slate-200 shadow-sm">
       {/* <h1>{selectedTech.length}</h1> */}
@@ -31,7 +37,10 @@ const SelectedTech = ({ selectedTech, setSelectedTech }: SelectedTechProps) => {
         ))}
       </div>
       {selectedTech.length !== 0 && (
-        <button className="btn flex-1 w-full mt-5 sm:flex-none bg-transparent border border-red-200 text-red-600 font-bold text-sm rounded-lg">
+        <button
+          onClick={handleRemoveAll}
+          className="btn flex-1 w-full mt-5 sm:flex-none bg-transparent border border-red-200 text-red-600 font-bold text-sm rounded-lg"
+        >
           Remove All
         </button>
       )}
