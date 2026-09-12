@@ -1,6 +1,6 @@
 import { useState, type Dispatch, type SetStateAction } from "react";
 import type { ITechData } from "../types";
-import { Check } from "lucide-react";
+import { Check, Ban } from "lucide-react";
 
 interface TechCardProps {
   techData: ITechData;
@@ -11,12 +11,24 @@ interface TechCardProps {
 const TechCard = ({ techData, selectedTech, setSelectedTech }: TechCardProps) => {
   // console.log("form card", techData);
 
-  //state  for button:
-  const [buttonType, setButtonType] = useState(false);
+  //state  for button: Check whether this technology is already selected
+  const buttonType = selectedTech.some((tech) => tech.id === techData.id);
 
   const handleButtonType = () => {
-    setButtonType(true);
     setSelectedTech([...selectedTech, techData]);
+  };
+
+  //Mouse hover ban sign:
+  const [isHovering, setIsHovering] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    setMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
   };
 
   return (
@@ -63,22 +75,34 @@ const TechCard = ({ techData, selectedTech, setSelectedTech }: TechCardProps) =>
       </div>
 
       {/* Button */}
-      <button
-        onClick={handleButtonType}
-        className={`btn mt-4 h-10 w-full rounded-lg text-sm font-semibold ${
-          buttonType ? "bg-[#e495b74f] text-[#db2777]" : "bg-[#0f172a] text-white hover:bg-slate-800"
-        }`}
-        disabled={buttonType}
+      <div
+        className={`relative mt-4 ${buttonType ? "cursor-none" : ""}`}
+        onMouseEnter={() => buttonType && setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        onMouseMove={handleMouseMove}
       >
-        {buttonType ? (
-          <>
-            <Check size={18} />
-            Added to Stack
-          </>
-        ) : (
-          "Add to Stack"
+        <button
+          onClick={handleButtonType}
+          disabled={buttonType}
+          className={`btn h-10 w-full rounded-lg text-sm font-semibold ${
+            buttonType ? "bg-[#e495b74f] text-[#db2777]" : "bg-[#0f172a] text-white hover:bg-slate-800"
+          }`}
+        >
+          {buttonType ? "Added to Stack" : "Add to Stack"}
+        </button>
+
+        {buttonType && isHovering && (
+          <Ban
+            size={20}
+            className="pointer-events-none absolute text-red-700"
+            style={{
+              left: mousePosition.x,
+              top: mousePosition.y,
+              transform: "translate(-50%, -50%)",
+            }}
+          />
         )}
-      </button>
+      </div>
     </div>
   );
 };
