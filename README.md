@@ -1,89 +1,88 @@
-<div align="center">
-
-<img src="./src/assets/logo-text.png" width="90" alt="Dev Stack logo" />
-
 # Dev Stack
 
 **Pick your perfect tech stack, one technology at a time.**
 
-Dev Stack is an interactive playground where developers explore modern frontend, backend, database, and tooling technologies — then build their own personalized stack by adding favorites to a live "Your Stack" panel.
-
-<br/>
-
-</div>
+Dev Stack is an interactive playground for exploring modern technologies and building a personalized tech stack. Browse technologies, compare their details, and add your favorites to a live **Your Stack** panel.
 
 ---
 
 ## ✨ About the Project
 
-Dev Stack lets you browse a curated library of technologies — React, PostgreSQL, Tailwind, Docker, and more — displayed as clean, informative cards. Each card shows a difficulty level, rating, category, and short description, so you can quickly judge whether a tool fits your project.
+Dev Stack provides a curated collection of frontend, backend, database, language, styling, DevOps, and development tools.
 
-Found something you like? Hit **Add to Stack** and it lands in your personal "Your Stack" sidebar, ready to review, trim, or clear out entirely. It's a small, focused tool built to make exploring a tech landscape feel a little more fun.
+Each technology card includes its icon, category, description, difficulty level, rating, and badge, making it easy to explore and compare technologies.
+
+Users can build their own stack by adding technologies, removing individual items, or clearing the entire stack.
 
 ---
 
 ## ⚙️ Technology Used
 
-| Category | Stack |
+| Category | Technology |
 |---|---|
-| **Framework** | React.js |
-| **Language** | TypeScript |
-| **Styling** | Tailwind CSS, DaisyUI |
-| **Notifications** | React-Toastify |
-| **Loading UI** | React Spinner |
-| **Icons** | Lucide React |
-| **Data** | Local JSON |
-| **Build Tool** | Vite |
+| Framework | React.js |
+| Language | TypeScript |
+| Styling | Tailwind CSS, DaisyUI |
+| Notifications | React-Toastify |
+| Loading UI | React Spinner |
+| Icons | Lucide React |
+| Data | Local JSON |
+| Build Tool | Vite |
 
 ---
 
 ## 🌟 Key Features
 
-**One Gradient, One Source of Truth**
-- Signature orange → pink → violet gradient
-- Powers the brand name, hero highlight, and every primary button
-- Defined in a single value — re-theme the whole app with one change
+### 1. Build Your Own Tech Stack
 
-**Live Stack Building**
-- Add technologies to your stack in real time
-- Duplicate protection with warning alerts
-- Instant toast feedback on add / remove / clear
-- One-click removal — single item or entire stack
+- Browse a collection of technologies with useful details.
+- Add technologies to the **Your Stack** panel instantly.
+- Prevents duplicate technologies from being added.
+- Shows the selected technology count in real time.
 
-**Responsive From the Ground Up**
-- 1 column on mobile
-- 2 columns on tablet
-- 3 columns on desktop
-- Mobile hamburger nav to match
+### 2. Manage Your Stack Easily
 
----
+- Remove individual technologies with one click.
+- Clear the entire stack using **Remove All**.
+- Added technologies become disabled to prevent accidental duplicates.
+- Get instant toast notifications for add, duplicate, remove, and clear actions.
 
-## Q&A
+### 3. Responsive & Interactive Experience
 
-**What is JSX, and why is it used in React?**
-JSX is that neat trick where you write what looks like HTML right inside your JavaScript. Under the hood it's just syntactic sugar for `React.createElement()` calls. It's used because describing UI structure this way is way more readable than nesting a pile of function calls.
-
-**What is the difference between props and state?**
-Props are handed to a component from the outside — think of them as arguments a component doesn't control. State is a component's own private memory that it manages and updates itself. Props flow in, state lives inside.
-
-**What does the useState hook do, and where did you use it in this project?**
-`useState` gives a component a piece of memory that persists across re-renders and triggers a re-render when it changes. I used it for the `selectedTech` array (the stack itself), plus small UI bits like hover state on the "Added to Stack" button.
-
-**What does the useEffect hook do, and why did you need it to load the JSON data?**
-`useEffect` lets you run side effects — things outside the normal render flow, like fetching data — after a component renders. I needed it to kick off loading the technology JSON once when the component mounts, rather than re-fetching on every render.
-
-**Why does every item in a .map() list need a unique key prop?**
-React uses the key to track which item is which across re-renders, so it can update, reorder, or remove the right DOM node instead of guessing. Skip it, and React either warns you or messes up the list when items change.
-
-**What is conditional rendering? Show one place you used it (example: the empty stack message).**
-Conditional rendering just means showing different UI depending on some condition — an if/else, but in JSX. I used it in the "Your Stack" panel: when `selectedTech.length === 0`, it shows a friendly "Your stack is empty" message; otherwise, it renders the list of selected cards instead.
-
-**How do you pass data from a parent component to a child component, and how does a child send something back to the parent?**
-Parent to child is just props — you pass values down like `<TechCard techData={tech} />`. Child to parent works the other way around: the parent passes a *function* down as a prop (like `setSelectedTech`), and the child calls that function to update the parent's state, effectively "sending data back up."
+- Fully responsive layout for mobile, tablet, and desktop.
+- Responsive technology grid: 1 column on mobile, 2 on tablet, and 3 on desktop.
+- Mobile-friendly navbar with hamburger menu.
+- Loading spinner while technology data is being fetched.
+- Consistent orange → pink → violet gradient throughout the interface.
 
 ---
 
-<div align="center">
+## ❓ Question & Answers
 
+> **What is JSX, and why is it used in React?**
 
-</div>
+JSX lets us write HTML-like UI inside JavaScript. It makes React components easier to read and write.
+
+> **What is the difference between props and state?**
+
+Props are data passed from a parent to a child. State is data managed and updated inside a component.
+
+> **What does the useState hook do, and where did you use it in this project?**
+
+`useState` manages changing data in a component. I used it to manage the selected technologies in the stack.
+
+> **What does the useEffect hook do, and why is it useful when loading JSON data?**
+
+`useEffect` is used for side effects such as fetching data. It can be used to load JSON data when a component renders.
+
+> **Why does every item in a .map() list need a unique key prop?**
+
+A unique `key` helps React identify each item and update the list efficiently.
+
+> **What is conditional rendering? Show one place you used it.**
+
+Conditional rendering shows different UI based on a condition. I used it to show an empty message when no technology is selected.
+
+> **How do you pass data from a parent component to a child component, and how does a child send something back to the parent?**
+
+A parent passes data through props. A child can communicate back by calling a function passed through props.
