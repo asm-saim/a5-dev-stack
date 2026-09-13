@@ -1,4 +1,4 @@
-import React, { type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import type { ITechData } from "../types";
 import { X } from "lucide-react";
 import { Bounce, toast } from "react-toastify";
@@ -11,7 +11,6 @@ interface ISelectedCardProps {
 
 const SelectedCard = ({ cardSelected, selectedTech, setSelectedTech }: ISelectedCardProps) => {
   //handle restore Tech by clicking cross sign:
-
   const handleAvailableTech = (cardSelected: ITechData) => {
     const restTechnology = selectedTech.filter((unMatchedTech) => unMatchedTech.id !== cardSelected.id);
     setSelectedTech(restTechnology);

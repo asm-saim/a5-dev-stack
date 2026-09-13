@@ -1,7 +1,8 @@
-import React, { use, useState } from "react";
+import { use, useState } from "react";
 import type { ITechData } from "../types";
 import AvailableTech from "./AvailableTech";
 import SelectedTech from "./SelectedTech";
+
 interface TechDataProps {
   techData: Promise<ITechData[]>;
 }
@@ -10,7 +11,7 @@ const Technologies = ({ techData }: TechDataProps) => {
   const allTechData = use(techData);
   console.log(allTechData);
 
-  //state fro selected tech:
+  //state for selected tech:
   const [selectedTech, setSelectedTech] = useState<ITechData[]>([]);
 
   return (

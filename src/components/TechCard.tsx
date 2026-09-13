@@ -1,9 +1,8 @@
 import { useState, type Dispatch, type SetStateAction } from "react";
 import type { ITechData } from "../types";
-import { Check, Ban } from "lucide-react";
+import { Ban } from "lucide-react";
 import { Bounce, toast } from "react-toastify";
 import "../../src/index.css";
-import { CheckCircle } from "lucide-react";
 
 interface TechCardProps {
   techData: ITechData;
